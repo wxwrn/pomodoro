@@ -10,8 +10,10 @@ class TimerService extends ChangeNotifier {
 
   void start() {
     timerPlaying = true;
+    --currentDuration;
+    notifyListeners();
     timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      currentDuration--;
+      --currentDuration;
       notifyListeners();
     });
   }
