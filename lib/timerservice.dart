@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 class TimerService extends ChangeNotifier {
   late Timer timer;
-  double currentDuration = 300;
-  double selectedTime = 300;
+  double currentDuration = 1500;
+  double selectedTime = 1500;
   bool timerPlaying = false;
   int rounds = 0;
   int goals = 0;
