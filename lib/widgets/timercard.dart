@@ -13,7 +13,7 @@ class TimerCard extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "FOCUS",
+          provider.currentState,
           style: textStyle(35, Colors.white, FontWeight.w700),
         ),
         const SizedBox(height: 20),
@@ -37,7 +37,8 @@ class TimerCard extends StatelessWidget {
               child: Center(
                   child: Text(
                 (provider.currentDuration ~/ 60).toString(),
-                style: textStyle(70, Colors.redAccent, FontWeight.bold),
+                style: textStyle(
+                    70, renderColor(provider.currentState), FontWeight.bold),
               )),
             ),
             const SizedBox(width: 10),
@@ -65,7 +66,8 @@ class TimerCard extends StatelessWidget {
                 seconds == 0
                     ? "${seconds.round()}0"
                     : seconds.round().toString(),
-                style: textStyle(70, Colors.redAccent, FontWeight.bold),
+                style: textStyle(
+                    70, renderColor(provider.currentState), FontWeight.bold),
               )),
             ),
           ],

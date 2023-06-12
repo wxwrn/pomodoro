@@ -6,6 +6,7 @@ TextStyle textStyle(double size, [Color? color, FontWeight? fw]) {
 }
 
 List selectableTimes = [
+  '0',
   '300', // divide by 60 seconds = 5 minutes
   '600', // 10 min
   '900', // 15 min
@@ -17,3 +18,11 @@ List selectableTimes = [
   '2700', // 45 min
   '3000', // 50 min
 ];
+
+Color renderColor(String currentState) {
+  if (currentState == 'FOCUS') {
+    return Colors.redAccent;
+  } else {
+    return Colors.lightBlueAccent;
+  }
+}
