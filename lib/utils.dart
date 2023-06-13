@@ -6,7 +6,6 @@ TextStyle textStyle(double size, [Color? color, FontWeight? fw]) {
 }
 
 List selectableTimes = [
-  '0',
   '300', // divide by 60 seconds = 5 minutes
   '600', // 10 min
   '900', // 15 min
